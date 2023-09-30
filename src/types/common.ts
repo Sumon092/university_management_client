@@ -3,3 +3,8 @@ export type IMeta = {
   page: number;
   size: number;
 };
+
+export type ResponseSuccessType = {
+  data: any;
+  meta: IMeta;
+};
