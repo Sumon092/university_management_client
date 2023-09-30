@@ -4,11 +4,14 @@ const {  Sider } = Layout;
 
 import {useState}from 'react'
 import { sidebarItems } from "@/constants/sidebarItems";
+import { getUserInfo } from "@/services/authService";
 import { USER_ROLE } from "@/constants/role";
 
   const SideBar = () => {
     const [collapsed, setCollapsed] = useState(false);
-    const role=USER_ROLE.ADMIN
+    const {role}=getUserInfo() as any
+    console.log(role);
+    
     return (
         <Sider
             collapsible
@@ -30,7 +33,7 @@ import { USER_ROLE } from "@/constants/role";
                 textAlign:'center',
                 fontWeight:'bold',
                 marginBottom:'1rem'
-            }}>PH-University</div>
+            }}>UMS</div>
             <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" items={sidebarItems(role)} />
         </Sider>
     );
