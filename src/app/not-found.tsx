@@ -1,8 +1,15 @@
+import { Row } from "antd";
+
 const NotFound = () => {
     return (
-        <div>
-            <h2>Page not found!404</h2>
-        </div>
+        <Row
+        justify='center'
+        align='middle'
+        style={{
+            height:'100vh'
+        }}>
+           <h1>404!! Page not found</h1>
+        </Row>
     );
 };
 

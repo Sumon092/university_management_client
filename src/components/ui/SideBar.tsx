@@ -10,7 +10,7 @@ import { USER_ROLE } from "@/constants/role";
   const SideBar = () => {
     const [collapsed, setCollapsed] = useState(false);
     const {role}=getUserInfo() as any
-    console.log(role);
+    
     
     return (
         <Sider
